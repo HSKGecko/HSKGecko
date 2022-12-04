@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "name": "mongodb",
+  "version": "1.0.0",
+  "main": "connect.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon connect.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
