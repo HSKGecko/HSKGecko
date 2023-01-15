@@ -8,6 +8,9 @@ router.get('/', function (req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+router.get('/Neil', function(req, res) {
+    res.sendFile(path.join(__dirname + '/Neil.html'));
+})
 // router.get('/about', function (req, res) {
 //     res.sendFile(path.join(__dirname + '/about.html'));
 // });
