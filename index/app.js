@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/Neil', function(req, res) {
-    res.sendFile(path.join(__dirname + '/Neil.html'));
+    res.sendFile(path.join(__dirname + '/neil.html'));
 })
 // router.get('/about', function (req, res) {
 //     res.sendFile(path.join(__dirname + '/about.html'));
