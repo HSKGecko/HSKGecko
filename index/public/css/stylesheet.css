@@ -1,70 +1,60 @@
-.time{
-    padding-top: 50px
-}
+body { font-family: sans-serif }
 
-.sentences{
-    padding: 20px;
+.org{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #title{
-    margin-top: 100px;
+    padding-top: 100px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-.org {
-padding-top: 10%;
-display:flex;
-width: 100%;
+.scene { 
+    width: 500px;
+    height: 250px;
+    margin: 50px 0;
+    perspective: 600px;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    flex-direction: column;
-    flex: 1;
-    margin: 20px;
-    background-color: gray;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    perspective: 1000px;
-    /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
+.card{
+    flex: 0 0 33.333px;
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
+    cursor: pointer;
     transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+    margin-left: 50px;
+    margin-top: 100px;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+.card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
 }
 
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
+.card__face{
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    /* Safari */
+    color: black;
+    text-align: center;
+    font-size: 20px;
     backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    background-color: white;
-    color: black;
+.card__face--front{
+    background: rgb(240, 243, 240);
 }
 
-/* Style the back side */
-.flip-card-back {
-    padding-top: 20px;
-    background-color: rgb(250, 246, 246);
-    color: white;
-    transform: rotatey(180deg);
+.card__face--back{
+    background: white;
+    transform: rotateY(180deg);
+}
+
+audio {
+    width: 100%;
 }
